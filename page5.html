@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page 5 - Happy Level Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Pacifico&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #7b2ff7, #f107a3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Orbitron', sans-serif;
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+    h1 {
+      font-size: 5rem;
+      margin: 0;
+      text-shadow: 0 0 15px rgba(255,255,255,0.8);
+      animation: glow 2s ease-in-out infinite alternate;
+      z-index: 10;
+    }
+    .name {
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      margin-top: 20px;
+      text-shadow: 0 0 12px rgba(255,255,255,0.9);
+      animation: pulse 3s ease-in-out infinite;
+      z-index: 10;
+    }
+    .from {
+      font-style: italic;
+      font-size: 1rem;
+      margin-top: 7em;
+      color: wheat;
+      font-family: 'Pacifico', cursive;
+      z-index: 10;
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 15px rgba(255,255,255,0.8);
+        color: #fff;
+      }
+      to {
+        text-shadow: 0 0 30px #ffeb3b, 0 0 40px #ffeb3b;
+        color: #ffeb3b;
+      }
+    }
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        color: white;
+        text-shadow: 0 0 12px rgba(255,255,255,0.9);
+      }
+      50% {
+        transform: scale(1.1);
+        color: #ffeb3b;
+        text-shadow: 0 0 30px #ffeb3b;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>HAPPY LEVEL UP +1</h1>
+  <div class="name">Catherine Banjarnahor</div>
+  <div class="from">from : frans nainggolan</div>
+  <script>
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+  </script>
+</body>
+</html>
